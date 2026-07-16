@@ -1,52 +1,76 @@
 # 🧠 AI-Powered Stress Management System
 
-An end-to-end Machine Learning project that predicts a user's stress level, identifies the major cause of stress, and provides personalized wellness recommendations through an interactive Streamlit dashboard.
+An end-to-end Machine Learning web application that predicts a user's stress level, identifies the primary cause of stress, and provides personalized wellness recommendations through an interactive Streamlit dashboard.
 
 ---
 
-## 📌 Overview
+# 🌐 Live Demo
 
-Stress is influenced by multiple lifestyle, health, and work-related factors. This project uses Machine Learning to analyze user inputs and predict stress levels while also providing explainable insights and personalized recommendations.
+🚀 **Try the application here**
 
-The application allows users to:
+https://stress-management-system-2.onrender.com
+
+> **Note:** This application is hosted on Render's free tier. The first request after a period of inactivity may take approximately **30–60 seconds** while the server wakes up.
+
+---
+
+# ⭐ Project Highlights
+
+- 🤖 End-to-End Machine Learning Project
+- 🌐 Interactive Streamlit Web Application
+- 📊 Random Forest Classification Model
+- 📈 Interactive Plotly Visualizations
+- 🧠 Root Cause Analysis
+- 💡 Personalized Wellness Recommendations
+- 📅 Automated Daily Action Plan
+- ☁️ Deployed on Render
+
+---
+
+# 📌 Overview
+
+Stress is influenced by multiple lifestyle, health, and work-related factors. This project leverages Machine Learning to analyze user inputs and predict stress levels while providing meaningful insights into the underlying causes of stress.
+
+The application enables users to:
 
 - Predict Stress Level
 - Identify Primary Stress Cause
-- View Stress Cause Analysis
+- Analyze Contributing Stress Factors
 - Receive Personalized Wellness Recommendations
-- Generate a Daily Action Plan
+- Generate a Daily Wellness Action Plan
 
 ---
 
 # 🚀 Features
 
-### 📊 Stress Prediction
-Predicts the user's stress level as:
+## 📊 Stress Level Prediction
 
-- Low
-- Medium
-- High
+Predicts user stress into one of three categories:
 
-using a trained Random Forest Machine Learning model.
+- 🟢 Low Stress
+- 🟡 Medium Stress
+- 🔴 High Stress
 
----
-
-### 🧠 Cause Analysis
-
-Identifies the dominant reason behind stress among:
-
-- Work Stress
-- Sleep Issues
-- Lifestyle Habits
-- Emotional Factors
-
-Displays scores using an interactive Plotly horizontal bar chart.
+using a trained **Random Forest Classifier**.
 
 ---
 
-### 💡 Personalized Recommendations
+## 🧠 Stress Cause Analysis
 
-Based on the predicted stress level and root cause, the system recommends activities such as:
+Determines the dominant contributor to stress among:
+
+- 💼 Work Stress
+- 😴 Sleep Issues
+- 🌿 Lifestyle Habits
+- ❤️ Emotional Factors
+
+Visualized using an interactive Plotly bar chart.
+
+---
+
+## 💡 Personalized Recommendations
+
+Based on the predicted stress level and primary stress cause, the application recommends activities such as:
 
 - Meditation
 - Exercise
@@ -57,49 +81,53 @@ Based on the predicted stress level and root cause, the system recommends activi
 
 ---
 
-### 📅 Daily Action Plan
+## 📅 Daily Action Plan
 
-Automatically creates a practical daily wellness schedule including:
+Automatically generates a practical daily wellness schedule containing:
 
 - Recommended activities
-- Estimated total time
-- Priority-based actions
+- Estimated completion time
+- Priority-based tasks
 
 ---
 
 # 🛠️ Tech Stack
 
-## Programming Language
+### Programming Language
 
 - Python
 
-## Machine Learning
+### Machine Learning
 
 - Random Forest Classifier
 - Scikit-learn
 
-## Data Processing
+### Data Processing
 
 - Pandas
 - NumPy
 
-## Model Serialization
+### Model Serialization
 
 - Joblib
 
-## Data Visualization
+### Data Visualization
 
-- Plotly Express
+- Plotly
 
-## Web Framework
+### Web Framework
 
 - Streamlit
+
+### Deployment
+
+- Render
 
 ---
 
 # 📂 Project Structure
 
-```
+```text
 Stress-Management-System/
 │
 ├── app.py
@@ -109,61 +137,63 @@ Stress-Management-System/
 ├── Models/
 │   └── Random_Forest.pkl
 │
+├── Dataset/
 ├── requirements.txt
 ├── README.md
-└── Dataset/
+└── runtime.txt
 ```
 
 ---
 
 # 📊 Input Features
 
-The model uses the following user inputs:
+The model predicts stress using the following features:
 
 | Feature | Description |
 |----------|-------------|
-| Age | User age |
-| Sleep Duration | Daily sleep hours |
-| Physical Activity | Activity level |
-| Screen Time | Daily screen usage |
-| Caffeine Intake | Daily caffeine consumption |
-| Alcohol Intake | Alcohol frequency |
-| Smoking Habit | Smoking status |
-| Work Hours | Daily working hours |
-| Travel Time | Daily commute |
-| Social Interactions | Interaction score |
-| Meditation Practice | Yes/No |
-| Blood Pressure | Blood pressure |
+| Age | Your age |
+| Sleep Duration | Average hours of sleep each day |
+| Physical Activity | Amount of daily physical exercise or movement |
+| Screen Time | Hours spent using phones, laptops, or other digital devices |
+| Caffeine Intake | Number of caffeinated drinks (coffee, tea, energy drinks) consumed per day |
+| Alcohol Intake | Frequency of alcohol consumption |
+| Smoking Habit | Whether the person smokes or not |
+| Work Hours | Average number of working or study hours each day |
+| Travel Time | Daily time spent travelling to work or college |
+| Social Interactions | Time spent interacting with family, friends, or colleagues |
+| Meditation Practice | Whether the person practices meditation regularly |
+| Blood Pressure | Blood pressure level |
 | Blood Sugar | Blood sugar level |
 | Cholesterol | Cholesterol level |
-| Marital Status | Married/Not Married |
+| Marital Status | Whether the person is married or not |
+
 
 ---
 
-# ⚙️ Engineered Features
+# ⚙️ Feature Engineering
 
-The application also creates additional features before prediction:
+The application generates additional features to improve prediction quality:
 
 - Health Risk Score
 - Lifestyle Risk Score
-- Work Life Balance
+- Work-Life Balance
 - Stress Exposure
 
-These engineered features improve prediction performance.
+These engineered features help improve the model's predictive capability.
 
 ---
 
 # 🤖 Machine Learning Model
 
-Algorithm Used:
+### Algorithm
 
 - Random Forest Classifier
 
-Reasons for selection:
+### Why Random Forest?
 
-- Handles non-linear relationships
-- Works well with tabular healthcare data
-- Robust against overfitting
+- Handles non-linear relationships effectively
+- Performs well on tabular healthcare datasets
+- Reduces overfitting through ensemble learning
 - Provides strong predictive performance
 
 ---
@@ -171,16 +201,16 @@ Reasons for selection:
 # 📈 Prediction Classes
 
 | Class | Meaning |
-|---------|----------|
+|--------|---------|
 | 0 | Low Stress |
 | 1 | Medium Stress |
 | 2 | High Stress |
 
 ---
 
-# 📷 Dashboard Sections
+# 📷 Dashboard Modules
 
-## 1️⃣ Prediction
+### 📍 Prediction Dashboard
 
 Displays:
 
@@ -191,74 +221,93 @@ Displays:
 
 ---
 
-## 2️⃣ Cause Analysis
+### 📍 Stress Cause Analysis
 
-Shows:
+Visualizes:
 
-- Work Score
+- Work Stress Score
 - Sleep Score
 - Lifestyle Score
 - Emotional Score
 
-Visualized using an interactive Plotly bar chart.
+using an interactive Plotly chart.
 
 ---
 
-## 3️⃣ Recommendations
+### 📍 Personalized Recommendations
 
-Generates personalized wellness suggestions based on:
+Generates:
 
-- Predicted Stress Level
-- Root Cause
-
-Also creates a daily action plan.
+- Wellness Recommendations
+- Daily Wellness Action Plan
+- Stress Management Tips
 
 ---
 
 # 📦 Installation
 
-Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/Shreya-1011/Stress-Management-System.git
 ```
 
-Move into the project directory
+### Move to the project directory
 
 ```bash
 cd Stress-Management-System
 ```
 
-Create a virtual environment
+### Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate the environment
+### Activate the virtual environment
 
-### Windows
+**Windows**
 
 ```bash
 .venv\Scripts\activate
 ```
 
-### Linux / Mac
+**Linux / macOS**
 
 ```bash
 source .venv/bin/activate
 ```
 
-Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the application
+### Run the application
 
 ```bash
 streamlit run app.py
 ```
 
 ---
+
+# 🎯 Future Improvements
+
+- AI-powered chatbot for stress counseling
+- Stress trend tracking over time
+- User authentication and profile management
+- Cloud database integration
+- Mobile-responsive interface
+
+---
+
+# 📄 License
+
+This project is intended for educational, research, and portfolio purposes.
+
+---
+
+# 👩‍💻 Author
+
+**Shreya Patel**
